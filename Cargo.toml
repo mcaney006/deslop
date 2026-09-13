@@ -1,0 +1,31 @@
+[package]
+name = "deslop"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+description = "Compiler-grade anti-slop analyzer for Ruby on Rails, Vue, and SQL. Karpathy four-gates, enforced in Rust."
+repository = "https://github.com/mcaney006/deslop"
+authors = ["Michael Caney Jr"]
+readme = "README.md"
+keywords = ["rails", "vue", "sql", "linter", "llm"]
+categories = ["development-tools", "command-line-utilities"]
+
+[lib]
+name = "deslop"
+path = "src/lib.rs"
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "deslop"
+path = "src/bin/deslop.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+lto = true
+opt-level = "z"
+codegen-units = 1
+panic = "abort"
+strip = true

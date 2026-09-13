@@ -1,0 +1,11 @@
+DESLOP includes a vendored excerpt of the Karpathy Guidelines
+(the four behavioral gates), derived from Andrej Karpathy's public
+observations (https://x.com/karpathy/status/2015883857489522876)
+and the community packaging at forrestchang/andrej-karpathy-skills
+(declared MIT in that project's SKILL.md frontmatter).
+
+The four gates are quoted. The Rails / Vue / SQL detectors, scoring
+model, CLI, WASM ABI, and remaining skill doctrine are original to
+this repository.
+
+This is a derivative work, not a verbatim clone of that plugin pack.
